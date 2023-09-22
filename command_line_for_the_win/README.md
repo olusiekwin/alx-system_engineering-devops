@@ -3,7 +3,8 @@
 `Bash` `Scripting`
 
 -----
-https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/324/06AChAO.png
+![Alt Text](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/324/06AChAO.png)
+
 
 ## Requirements
 ### General
