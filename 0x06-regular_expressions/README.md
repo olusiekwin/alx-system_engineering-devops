@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Background Context</title>
-</head>
-<body>
+## 0x06. Regular expression
+
+`Regex` `DevOps`
+
     <h1>Background Context</h1>
 
     <p>For this project, you have to build your regular expression using Oniguruma, a regular expression library that is used by Ruby by default. Note that other regular expression libraries sometimes have different properties.</p>
@@ -47,6 +44,4 @@ $ ./example.rb 127.0.0.a
         <li>The first line of all your Bash scripts should be exactly <code>#!/usr/bin/env ruby</code></li>
         <li>All your regex must be built for the Oniguruma library</li>
     </ul>
-</body>
-</html>
 
