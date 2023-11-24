@@ -2,7 +2,7 @@
 
 ## Project Details
 
-- **Author:** Sylvain Kalache
+- **Author:** Graham Olusiekwin
 - **Weight:** 1
 - **Project Duration:** Nov 24, 2023, 6:00 AM - Nov 25, 2023, 6:00 AM
 - **Checker Release:** Nov 24, 2023, 12:00 PM
