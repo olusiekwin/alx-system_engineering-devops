@@ -13,7 +13,7 @@ username="$3"
 ssh_key_path="$4"
 
 # Transfer the file using scp
-scp -o "StrictHostKeyChecking no" -i "$path_to_ssh_key" "$path_to_file" "$username@$ip:~/"
+scp -o StrictHostKeyChecking=no -i "$ssh_key_path" "$file_path" "$username"@"$server_ip":~/
 
 # Display success message
 echo "File transferred successfully to ~/"
