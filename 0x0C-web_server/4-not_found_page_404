@@ -1,19 +1,24 @@
 #!/usr/bin/env bash
-# Install Nginx
+
+# Update the package list
 sudo apt-get update -y
+
+# Install Nginx
 sudo apt-get install -y nginx
 
-# Create Hello World index page
+# Create the Hello World index page
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
-# Configure 301 redirect
-sudo sed -i '/^server {/a \        location /redirect_me {\n                 return 301 https://www.youtube.com/watch?v=3lFkDc6dFoY;\n        }' /etc/nginx/sites-enabled/default
+# Configure a 301 redirect
+sudo bash -c 'echo "        location /redirect_me {" >> /etc/nginx/sites-available/default'
+sudo bash -c 'echo "                 return 301 https://www.youtube.com/watch?v=3lFkDc6dFoY;" >> /etc/nginx/sites-available/default'
+sudo bash -c 'echo "        }" >> /etc/nginx/sites-available/default'
 
-# Create custom 404 page
+# Create the custom 404 page
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
 
-# Configure custom 404 page
-sudo sed -i '/^server {/a \        error_page 404 /custom_404.html;\n        location = /custom_404.html {\n                 root /var/www/html;\n                 internal;\n        }' /etc/nginx/sites-enabled/default
+# Configure the custom 404 page
+sudo sed -i '/^server {/a \        error_page 404 /custom_404.html;\n        location = /custom_404.html {\n                 root /var/www/html;\n                 internal;\n        }' /etc/nginx/sites-available/default
 
 # Restart Nginx
 sudo service nginx restart
